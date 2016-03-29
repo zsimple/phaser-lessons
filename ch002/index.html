@@ -1,0 +1,49 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8" />
+	<title>Phaser - 002</title>
+	<script type="text/javascript" src="../libs/phaser.min.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var game = new Phaser.Game(400, 300, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+
+
+function preload() {
+	game.load.spritesheet('phaser', '1.png', 34, 34);
+
+}
+
+function create() {
+	var player1 = game.add.sprite(100, 20, 'phaser');
+	player1.animations.add('walk', [0, 1, 2, 1], 4, true);
+	player1.animations.play('walk');
+
+	var player2 = game.add.sprite(100, 80, 'phaser');
+	player2.animations.add('walk', [3, 4, 5, 4], 4, true);
+	player2.animations.play('walk');
+
+	var player3 = game.add.sprite(100, 140, 'phaser');
+	player3.animations.add('walk', [6, 7, 8, 7], 4, true);
+	player3.scale.setTo(1.5, 1.5);
+	player3.animations.play('walk');
+
+	var player4 = game.add.sprite(100, 200, 'phaser');
+	player4.animations.add('walk', [9, 10, 11, 10], 4, true);
+	console.log(player4)
+	// player4.smoothed = false;
+	player4.scale.setTo(1.5, 1.5);
+	player4.animations.play('walk');
+}
+
+function update() {
+
+}
+
+</script>
+
+</body>
+</html>
