@@ -1,6 +1,6 @@
-<!doctype html> 
-<html lang="en"> 
-<head> 
+<!doctype html>
+<html lang="en">
+<head>
 	<meta charset="UTF-8" />
 	<title>Phaser - 001</title>
 	<script type="text/javascript" src="../libs/phaser.min.js"></script>
@@ -9,12 +9,14 @@
 
 <script type="text/javascript">
 
-var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+var game = new Phaser.Game(400, 300, Phaser.AUTO, '', { preload: preload, create: create, update: update });
 
 function preload() {
+	game.load.image('player', '../assets/player.png');
 }
 
 function create() {
+	game.add.sprite(20, 20, 'player');
 }
 
 function update() {

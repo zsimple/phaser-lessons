@@ -1,6 +1,6 @@
-<!doctype html> 
-<html lang="en"> 
-<head> 
+<!doctype html>
+<html lang="en">
+<head>
 	<meta charset="UTF-8" />
 	<title>Phaser - 002</title>
 	<script type="text/javascript" src="../libs/phaser.min.js"></script>
@@ -9,16 +9,16 @@
 
 <script type="text/javascript">
 
-var game = new Phaser.Game(400, 300, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+var game = new Phaser.Game(400, 300, Phaser.AUTO, '', { preload: preload, create: create, update: update }, false, false);
 
 
 function preload() {
-	game.load.spritesheet('phaser', '1.png', 34, 34);
+	game.load.spritesheet('player', '../assets/player.png', 34, 34);
 
 }
 
 function create() {
-	var player1 = game.add.sprite(100, 20, 'phaser');
+	var player1 = game.add.sprite(100, 20, 'player');
 	player1.animations.add('walk', [0, 1, 2, 1], 4, true);
 	player1.animations.play('walk');
 
@@ -33,9 +33,7 @@ function create() {
 
 	var player4 = game.add.sprite(100, 200, 'phaser');
 	player4.animations.add('walk', [9, 10, 11, 10], 4, true);
-	console.log(player4)
-	// player4.smoothed = false;
-	player4.scale.setTo(1.5, 1.5);
+	player4.rotate.setTo(1.5, 1.5);
 	player4.animations.play('walk');
 }
 
