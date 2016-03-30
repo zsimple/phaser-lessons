@@ -22,14 +22,14 @@ function create() {
 
   bridge = game.add.tileSprite(0, 0, game.width, 128, 'bridge');
 
-	var player1 = game.add.sprite(100, 70, 'player');
-	player1.animations.add('walk', [3, 4, 5, 4], 4, true);
-	player1.animations.play('walk');
-  player1.addChild(game.make.sprite(0, 24, 'shadow'));
+	var player = game.add.sprite(100, 70, 'player');
+	player.animations.add('walk', [3, 4, 5, 4], 4, true);
+	player.animations.play('walk');
+  player.addChild(game.make.sprite(0, 24, 'shadow'));
 
-  var player2 = game.add.sprite(200, 70);
-  player2.addChild(game.make.sprite(0, 24, 'shadow'));
-  var true_player = player2.addChild(game.make.sprite(0, 0, 'player'));
+  player = game.add.sprite(200, 70);
+  player.addChild(game.make.sprite(0, 24, 'shadow'));
+  var true_player = player.addChild(game.make.sprite(0, 0, 'player'));
   true_player.animations.add('walk', [3, 4, 5, 4], 4, true);
   true_player.animations.play('walk');
 }

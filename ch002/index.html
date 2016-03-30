@@ -18,23 +18,23 @@ function preload() {
 }
 
 function create() {
-	var player1 = game.add.sprite(100, 20, 'player');
-	player1.animations.add('walk', [0, 1, 2, 1], 4, true);
-	player1.animations.play('walk');
+	var player = game.add.sprite(100, 20, 'player');
+	player.animations.add('walk', [0, 1, 2, 1], 4, true);
+	player.animations.play('walk');
 
-	var player2 = game.add.sprite(100, 80, 'phaser');
-	player2.animations.add('walk', [3, 4, 5, 4], 4, true);
-	player2.animations.play('walk');
+	player = game.add.sprite(100, 80, 'player');
+	player.animations.add('walk', [3, 4, 5, 4], 4, true);
+	player.animations.play('walk');
 
-	var player3 = game.add.sprite(100, 140, 'phaser');
-	player3.animations.add('walk', [6, 7, 8, 7], 4, true);
-	player3.scale.setTo(1.5, 1.5);
-	player3.animations.play('walk');
+	player = game.add.sprite(100, 140, 'player');
+	player.animations.add('walk', [6, 7, 8, 7], 4, true);
+	player.scale.setTo(1.5, 1.5);
+	player.animations.play('walk');
 
-	var player4 = game.add.sprite(100, 200, 'phaser');
-	player4.animations.add('walk', [9, 10, 11, 10], 4, true);
-	player4.rotate.setTo(1.5, 1.5);
-	player4.animations.play('walk');
+	player = game.add.sprite(100, 200, 'player');
+	player.animations.add('walk', [9, 10, 11, 10], 4, true);
+	player.angle = 90;
+	player.animations.play('walk');
 }
 
 function update() {
